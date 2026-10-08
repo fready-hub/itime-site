@@ -10,6 +10,7 @@
 | `/privacy.html` (`/privacy`) | 개인정보처리방침 — 스토어 "개인정보처리방침" 칸 |
 | `/account-deletion.html` | 데이터 삭제 안내 |
 | `/404.html` | 오타 대응 |
+| `/app-ads.txt` | AdMob 게시자 선언 — 코코세이버와 같은 AdMob 계정(`pub-4987131221778488`) |
 
 앱의 설정 화면은 `https://itime.rapa.world/privacy` 와 `/manual` 로 연결한다(`lib/features/settings/settings_screen.dart`).
 
@@ -32,5 +33,4 @@
 수정하면 시행일과 `<footer>` 날짜를 함께 갱신한다.
 
 ## 아직 없는 것
-- `app-ads.txt` — AdMob 게시자 ID 가 정해지면 그 내용으로 만든다. **빈 파일을 미리 두지 않는다**(공통 DOMAIN.md).
 - 스토어 링크 — 출시 후 랜딩의 "스토어 출시 준비 중" 배지를 바꾼다.
