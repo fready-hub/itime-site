@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아이타임 개인정보처리방침</title>
+<link rel="canonical" href="https://itime.rapa.world/privacy.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div class="wrap narrow">
+  <header class="top">
+    <a class="brand" href="./"><span class="mark">아</span>아이타임</a>
+    <nav>
+      <a href="manual/">사용 설명서</a>
+      <a href="privacy.html" aria-current="page">개인정보처리방침</a>
+    </nav>
+  </header>
+
+  <main class="doc">
+    <h1>아이타임 개인정보처리방침</h1>
+    <div class="date">시행일: 2026년 10월 8일</div>
+
+    <p>아이타임(이하 ‘앱’, 패키지 <code>world.rapa.itime</code>)은 여러 자녀의 학원 시간표·보강·학원비 결제일을
+      관리하는 앱입니다. 본 방침은 앱이 어떤 정보를 다루고 어떻게 보호하는지 설명합니다.</p>
+
+    <div class="note">
+      핵심 요약: 아이 이름·학년, 학원, 시간표, 보강, 학원비 기록은 <strong>모두 이용자의 기기에만 저장</strong>되며
+      <strong>개발자는 이를 수집하거나 열람할 수 없습니다.</strong> 회원가입·로그인·서버가 없습니다.
+      기기 밖으로 나가는 정보는 <strong>광고 표시를 위해 Google 광고 SDK 가 처리하는 정보</strong>뿐입니다.
+    </div>
+
+    <h2>1. 앱이 다루는 정보</h2>
+
+    <h3>가. 이용자가 입력하는 정보 (기기 내부에만 저장)</h3>
+    <table>
+      <tr><th>항목</th><th>내용</th></tr>
+      <tr><td>아이</td><td>이름(애칭 가능), 학교급, 학년(유치원은 나이)</td></tr>
+      <tr><td>학원</td><td>학원명, 과목, 색상, 전화번호(선택), 메모(선택)</td></tr>
+      <tr><td>수강·시간표</td><td>요일·시간, 수강 기간</td></tr>
+      <tr><td>보강</td><td>날짜·시간, 사유, 메모</td></tr>
+      <tr><td>학원비</td><td>결제 주기, 결제일, 결제한 날짜 기록, 알림 시간 (금액은 받지 않습니다)</td></tr>
+    </table>
+    <ul>
+      <li>위 정보는 <strong>기기 안의 데이터베이스에만 저장</strong>되고 개발자 서버로 전송되지 않습니다. 개발자는 서버를 운영하지 않습니다.</li>
+      <li>아이의 <strong>생년월일·주소·사진·연락처는 입력받지 않습니다.</strong></li>
+      <li>회원가입·로그인·계정이 없습니다.</li>
+    </ul>
+
+    <h3>나. 백업 파일 (이용자가 직접 내보낼 때만)</h3>
+    <ul>
+      <li>설정의 <strong>백업 내보내기</strong>를 누르면 위 정보를 담은 파일(<code>aitime_backup_날짜.json</code>)을 만들고, 운영체제 공유 화면을 엽니다.</li>
+      <li>파일을 어디로 보낼지는 <strong>이용자가 직접 고릅니다</strong>(메신저, 메일, 클라우드 등). 앱이 스스로 파일을 어딘가로 보내지 않습니다.</li>
+      <li>보낸 곳에서의 보관·처리는 그 서비스의 정책을 따릅니다.</li>
+    </ul>
+
+    <h3>다. 광고 (Google AdMob)</h3>
+    <p>앱은 무료로 제공되며 탭 화면 아래에 배너 광고를 표시합니다. 광고는 Google 의 <strong>Google Mobile Ads SDK</strong>가 제공하며,
+      광고를 보여주고 측정하고 부정 사용을 막기 위해 다음 정보를 처리합니다.</p>
+    <ul>
+      <li>광고 식별자 — Android 광고 ID, iOS 에서는 <strong>이용자가 추적을 허용한 경우에만</strong> 광고 식별자(IDFA).
+        iOS 는 앱을 처음 실행할 때 추적 허용 여부를 묻습니다(App Tracking Transparency). 허용하지 않아도 앱의 기능과 광고 표시는 그대로이며, 맞춤형이 아닌 광고가 나옵니다.</li>
+      <li>IP 주소(이를 통한 대략적 위치), 기기 모델·운영체제·언어 등 기기 정보</li>
+      <li>광고 노출·클릭 등 광고와의 상호작용</li>
+    </ul>
+    <p>이 정보는 Google 이 처리하며, 이용자가 입력한 <strong>아이 이름·시간표·학원 정보는 광고 SDK 에 전달되지 않습니다.</strong>
+      Google 의 처리 방식은 <a href="https://policies.google.com/technologies/partner-sites">Google 파트너 사이트·앱의 데이터 사용</a>에서 볼 수 있습니다.</p>
+    <p>유럽경제지역·영국 등 동의가 필요한 지역에서는 앱 시작 시 Google 의 동의 화면(UMP)이 표시되며,
+      설정 → <strong>광고 개인정보 옵션</strong>에서 언제든 동의를 바꿀 수 있습니다.
+      Android 설정 → Google → 광고에서 광고 ID 를 재설정하거나 삭제할 수도 있습니다.
+      iPhone 은 설정 → 개인정보 보호 및 보안 → 추적에서 언제든 허용을 바꿀 수 있습니다.</p>
+
+    <h3>라. 수집하지 않는 것</h3>
+    <ul>
+      <li>사용 행태 분석(Google Analytics 등), 오류 리포팅(Crashlytics 등) 도구를 쓰지 않습니다.</li>
+      <li>위치 권한, 연락처, 사진, 카메라, 마이크에 접근하지 않습니다.</li>
+    </ul>
+
+    <h2>2. 이용 목적</h2>
+    <ul>
+      <li>시간표·보강·학원비 결제일 관리와 결제일 알림 (기기 안에서만 처리)</li>
+      <li>광고 표시 (Google AdMob)</li>
+    </ul>
+
+    <h2>3. 앱이 요청하는 권한</h2>
+    <table>
+      <tr><th>권한</th><th>목적</th><th>거부 시</th></tr>
+      <tr><td>알림</td><td>학원비 결제일 당일, 이용자가 정한 시간에 알림. 처음으로 알림을 켠 수강을 저장할 때 묻습니다.</td><td>알림만 받지 못하고 나머지 기능은 그대로</td></tr>
+      <tr><td>인터넷</td><td>광고 표시. 앱의 기능(시간표·알림·백업)은 인터넷 없이 동작합니다.</td><td>—(설치 시 자동)</td></tr>
+      <tr><td>광고 ID</td><td>광고 SDK 가 사용 (위 1-다)</td><td>—(설치 시 자동, 기기 설정에서 삭제 가능)</td></tr>
+      <tr><td>추적 허용(iPhone)</td><td>맞춤형 광고에 광고 식별자(IDFA)를 쓸지. 처음 실행할 때 묻습니다 (위 1-다)</td><td>맞춤형이 아닌 광고가 나오고 나머지 기능은 그대로</td></tr>
+    </table>
+    <p>정확한 알람 권한은 쓰지 않으므로 알림이 정한 시각보다 늦게(보통 몇 분, 길게는 1시간 정도) 올 수 있습니다.
+      학원 전화 버튼은 기기의 전화 앱을 여는 것이며 전화 권한을 요청하지 않습니다.</p>
+
+    <h2 id="delete">4. 보유 기간과 삭제</h2>
+    <p>앱의 데이터는 이용자의 기기에만 있으므로 <strong>이용자가 직접 전부 삭제할 수 있습니다.</strong> 자세한 방법은 <a href="account-deletion.html">데이터 삭제 안내</a>를 참고하세요.</p>
+    <table>
+      <tr><th>정보</th><th>어디에</th><th>삭제</th></tr>
+      <tr><td>아이·학원·시간표·보강·학원비 기록</td><td>기기 내부</td><td>앱에서 개별 삭제, 또는 <strong>앱을 삭제하면 전부 삭제</strong>. 서버에 사본이 없습니다.</td></tr>
+      <tr><td>내보낸 백업 파일</td><td>이용자가 고른 곳</td><td>이용자가 그곳에서 직접 삭제</td></tr>
+      <tr><td>광고 관련 정보</td><td>Google</td><td>Google 정책에 따름. 기기 설정에서 광고 ID 재설정·삭제</td></tr>
+    </table>
+
+    <h2>5. 제3자 제공</h2>
+    <p>개발자는 이용자의 정보를 판매하거나 제3자에게 제공하지 않습니다. 개발자는 이용자가 입력한 정보를 받지 않으므로 제공할 정보도 없습니다.
+      광고 표시를 위해 Google 이 위 1-다의 정보를 처리합니다.</p>
+
+    <h2>6. 아동의 개인정보</h2>
+    <p>앱은 <strong>보호자(성인)를 위한 앱</strong>입니다. 보호자가 자녀의 이름·학년을 입력할 수 있으나 이 정보는 기기에만 저장되며 개발자나 광고 SDK 로 전송되지 않습니다.
+      앱은 만 14세 미만 아동이 직접 사용하는 것을 대상으로 하지 않습니다.</p>
+
+    <h2>7. 안전성</h2>
+    <p>데이터는 운영체제가 앱별로 분리해 보호하는 저장 공간에 있습니다. 기기 잠금(비밀번호·생체 인증)을 설정해 두시기를 권합니다.
+      백업 파일은 암호화되지 않은 텍스트 파일이므로 믿을 수 있는 곳에만 보관하세요.</p>
+
+    <h2>8. 방침 변경</h2>
+    <p>본 방침이 바뀌면 이 페이지에 개정 내용과 시행일을 게시합니다.</p>
+
+    <h2>9. 문의</h2>
+    <p>개인정보 관련 문의: <a href="mailto:fready.shin@gmail.com?subject=%5B%EC%95%84%EC%9D%B4%ED%83%80%EC%9E%84%5D%20%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%20%EB%AC%B8%EC%9D%98">fready.shin@gmail.com</a></p>
+  </main>
+
+  <footer class="site">
+    <div class="links"><a href="./">아이타임 홈</a><a href="manual/">사용 설명서</a><a href="account-deletion.html">데이터 삭제 안내</a></div>
+    아이타임 · 최종 수정 2026년 10월 8일 · <a href="https://rapa.world/">rapa.world 의 다른 서비스 보기</a>
+  </footer>
+</div>
+</body>
+</html>
