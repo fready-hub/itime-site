@@ -76,8 +76,21 @@ details p { margin: 8px 0 0; color: var(--label); }
 .doc li { margin: 4px 0; }
 .note { background: var(--primary-soft); color: var(--primary-ink); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
 .warn { background: var(--warn-soft); color: var(--warn-ink); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
-.toc { background: var(--card); border-radius: 16px; padding: 14px 18px; }
-.toc ol { margin: 6px 0 0; padding-left: 20px; }
+/* 설명서 목차 — 시간표 카드 모양: 묶음 머리글, 번호, 점선, 그 기능이 있는 탭 */
+.toc { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px 14px; }
+.toc .toc-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  padding-bottom: 10px; border-bottom: 1px solid var(--border); }
+.toc .toc-head span { color: var(--sub); font-size: .82rem; }
+.toc .grp { color: var(--primary-ink); font-size: .8rem; font-weight: 700; letter-spacing: .04em; margin: 16px 0 2px; }
+.toc ol { list-style: none; margin: 0; padding: 0; }
+.toc li a { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; color: var(--ink); text-decoration: none; }
+.toc li a .n { flex: none; width: 2.4em; color: var(--sub); font-variant-numeric: tabular-nums; font-size: .9rem; }
+.toc li a .t { flex: none; max-width: 70%; }
+.toc li a::after { content: ""; order: 3; flex: 1; min-width: 12px; border-bottom: 2px dotted var(--border); opacity: .9; transform: translateY(-.3em); }
+.toc li a .tab { order: 4; flex: none; font-size: .78rem; font-weight: 600; color: var(--primary-ink); background: var(--primary-soft);
+  border-radius: 999px; padding: 2px 9px; }
+.toc li a .tab:empty { display: none; }
+.toc li a:hover .t { color: var(--primary); }
 table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: .93rem; background: var(--card); border-radius: 12px; overflow: hidden; }
 th, td { border-bottom: 1px solid var(--border); padding: 9px 10px; text-align: left; vertical-align: top; }
 th { color: var(--label); font-weight: 600; }

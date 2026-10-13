@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>아이타임 - 우리 아이 학원 시간표</title>
-<meta name="description" content="여러 자녀의 학원 시간표·보강·학원비 결제일을 한 폰에서 관리하는 앱. 회원가입 없이, 데이터는 내 폰에만.">
+<meta name="description" content="여러 자녀의 학원 시간표·휴강·보강·학원비 결제일을 한 폰에서 관리하는 앱. 주간 시간표 PDF 인쇄, 한 달 학원비 합계. 회원가입 없이, 데이터는 내 폰에만.">
 <link rel="canonical" href="https://itime.rapa.world/">
 <meta property="og:title" content="아이타임 - 우리 아이 학원 시간표">
 <meta property="og:description" content="여러 자녀의 학원 시간표·보강·학원비 결제일을 한 폰에서.">
@@ -34,7 +34,8 @@
           <li>회원가입 없음</li><li>데이터는 내 폰에만</li><li>안드로이드 · iOS</li>
         </ul>
         <div class="badges">
-          <span class="badge soon" aria-label="스토어 출시 준비 중">스토어 출시 준비 중</span>
+          <a class="badge" href="https://play.google.com/store/apps/details?id=world.rapa.itime">Google Play에서 받기</a>
+          <span class="badge soon">App Store 심사 중</span>
           <a class="badge ghost" href="manual/">사용 설명서 보기</a>
         </div>
       </div>
@@ -50,6 +51,7 @@
           <li>같은 시간에 두 아이 수업이 있으면 칸을 나눠 나란히</li>
           <li>월간 달력에서 날짜를 누르면 그날 일정이 아래에</li>
           <li>요일마다 수업 시간이 달라도 그대로 입력</li>
+          <li>주간 시간표를 A4 한 장 PDF로 인쇄하거나 메신저로 공유</li>
         </ul>
       </div>
       <div class="phone sm"><img src="img/month.webp" width="390" height="844" alt="월간 달력: 날짜마다 학원 색 점과 보강 배지" loading="lazy"></div>
@@ -57,32 +59,34 @@
 
     <section class="feature">
       <div class="text">
-        <div class="kicker">보강 관리</div>
-        <h2>빠진 수업과 보강,<br>헷갈리지 않게</h2>
-        <p>결석이나 휴강으로 생긴 보강을 등록하면 원래 수업은 시간표에서 흐리게 표시돼요.
-          보강 일정은 월간 달력과 보강 목록에서 따로 챙겨요.</p>
+        <div class="kicker">휴강 · 보강 관리</div>
+        <h2>휴강과 보강,<br>헷갈리지 않게</h2>
+        <p>시간표에서 수업을 눌러 <strong>휴강</strong>으로 표시하고 "선생님 출장"처럼 짧은 메모를 남겨요.
+          빠진 수업은 시간표에서 흐리게 보이고, 보강 날짜가 정해지면 그 수업에서 바로 보강을 이어 등록해요.</p>
         <ul>
+          <li>보강 날짜가 아직 없는 휴강은 보강 탭 위쪽에 모아서</li>
           <li>최근 4주 · 앞으로 4주 수업 중에서 빠진 수업 고르기</li>
           <li>학원 사정으로 생긴 추가 수업도 등록</li>
           <li>예정 / 지난 보강을 나눠 보기</li>
         </ul>
       </div>
-      <div class="phone sm"><img src="img/makeups.webp" width="390" height="844" alt="보강 목록: 날짜, 학원, 아이, 사유와 원래 수업" loading="lazy"></div>
+      <div class="phone sm"><img src="img/makeups.webp" width="390" height="844" alt="보강 목록: 보강 날짜 미정인 휴강과 예정된 보강, 사유와 원래 수업" loading="lazy"></div>
     </section>
 
     <section class="feature">
       <div class="text">
         <div class="kicker">학원비 결제일 알림</div>
         <h2>학원비 날,<br>놓치지 않게 알려드려요</h2>
-        <p>아이별로 결제 주기(1개월·3개월)와 결제일을 정해 두면, 결제일 당일 원하는 시간에 알림이 와요.
+        <p>아이별로 결제 주기(1·3·6개월)와 결제일을 정해 두면, 결제일 당일 원하는 시간에 알림이 와요.
           학원 화면에서 "결제 완료"만 누르면 다음 결제일로 넘어가요.</p>
         <ul>
           <li><span class="tag t-today">오늘 결제일</span> <span class="tag t-soon">D-3</span> <span class="tag t-over">2일 지남 미결제</span> 상태가 한눈에</li>
+          <li>한 달 학원비 합계를 아이별·전체로</li>
           <li>31일 결제는 짧은 달엔 말일로 자동 계산</li>
-          <li>학원 전화도 버튼 하나로</li>
+          <li>학원 전화도 버튼 하나로 — 번호는 연락처에서 골라 넣기</li>
         </ul>
       </div>
-      <div class="phone sm"><img src="img/academies.webp" width="390" height="844" alt="학원 관리 화면: 아이별 학원비 상태와 결제 완료 버튼, 전화 버튼" loading="lazy"></div>
+      <div class="phone sm"><img src="img/academies.webp" width="390" height="844" alt="학원 관리 화면: 맨 위 한 달 학원비 합계(아이별·전체), 학원비 상태와 결제 완료 버튼, 전화 버튼" loading="lazy"></div>
     </section>
 
     <section class="feature">
@@ -107,9 +111,10 @@
 
     <section>
       <h2 style="font-size:1.45rem">자주 묻는 질문</h2>
-      <details><summary>무료인가요?</summary><p>네, 무료예요. 탭 화면 아래에 작은 배너 광고가 하나 있어요. 입력하는 화면에는 광고가 없어요.</p></details>
+      <details><summary>무료인가요?</summary><p>네, 무료예요. 탭 화면 아래에 작은 배너 광고가 하나 있어요. 입력하는 화면에는 광고가 없고, 아이가 함께 볼 수 있어서 보호자 지도(PG) 등급 이하 광고만 나와요.</p></details>
       <details><summary>아이 몇 명까지 등록할 수 있나요?</summary><p>제한이 없어요. 아이마다 다니는 학원과 시간, 학원비를 따로 관리해요.</p></details>
       <details><summary>배우자 폰과 같이 볼 수 있나요?</summary><p>실시간 공유는 없어요(서버가 없어서요). 백업 파일을 보내 다른 폰에서 가져오면 같은 시간표를 볼 수 있어요.</p></details>
+      <details><summary>어디서 받을 수 있나요?</summary><p>안드로이드는 <a href="https://play.google.com/store/apps/details?id=world.rapa.itime">Google Play</a>에서 받을 수 있어요. 아이폰(App Store)은 심사 중이에요.</p></details>
       <details><summary>알림이 안 와요.</summary><p>휴대폰 설정에서 아이타임 알림이 켜져 있는지 확인해 주세요. 자세한 방법은 <a href="manual/#faq">사용 설명서</a>에 있어요.</p></details>
     </section>
   </main>
