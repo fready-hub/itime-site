@@ -7,7 +7,7 @@
 <meta name="description" content="아이타임 사용 설명서 — 아이·학원 등록, 시간표, 보강, 학원비 알림, 백업으로 폰 옮기기.">
 <link rel="canonical" href="https://itime.rapa.world/manual/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../site.css">
 </head>
 <body>
@@ -28,38 +28,54 @@
       처음이라면 <a href="#start">시작하기</a>의 세 단계만 따라 하면 시간표가 채워져요.</p>
 
     <nav class="toc" aria-label="목차">
-      <div class="toc-head"><strong>목차</strong><span>오른쪽은 그 기능이 있는 탭이에요</span></div>
-      <div class="grp">시작하기</div>
-      <ol>
-        <li><a href="#kid"><span class="n">1-1</span><span class="t">아이 등록</span><span class="tab">아이</span></a></li>
-        <li><a href="#academy"><span class="n">1-2</span><span class="t">학원 등록</span><span class="tab">학원</span></a></li>
-        <li><a href="#enroll"><span class="n">1-3</span><span class="t">아이에게 학원 추가</span><span class="tab">아이</span></a></li>
-      </ol>
-      <div class="grp">시간표</div>
-      <ol>
-        <li><a href="#week"><span class="n">2-1</span><span class="t">주간 시간표</span><span class="tab">스케줄</span></a></li>
-        <li><a href="#month"><span class="n">2-2</span><span class="t">월간 달력</span><span class="tab">스케줄</span></a></li>
-        <li><a href="#print"><span class="n">2-3</span><span class="t">시간표 인쇄 · PDF 공유</span><span class="tab">스케줄</span></a></li>
-        <li><a href="#cancel"><span class="n">2-4</span><span class="t">휴강 설정과 메모</span><span class="tab">스케줄</span></a></li>
-      </ol>
-      <div class="grp">보강</div>
-      <ol>
-        <li><a href="#makeup"><span class="n">3</span><span class="t">보강 등록과 목록</span><span class="tab">보강</span></a></li>
-      </ol>
-      <div class="grp">학원비</div>
-      <ol>
-        <li><a href="#fee"><span class="n">4-1</span><span class="t">결제 주기 · 결제일 · 알림</span><span class="tab">아이</span></a></li>
-        <li><a href="#paid"><span class="n">4-2</span><span class="t">상태 보기와 결제 완료</span><span class="tab">학원</span></a></li>
-        <li><a href="#total"><span class="n">4-3</span><span class="t">한 달 학원비 합계</span><span class="tab">학원</span></a></li>
-      </ol>
-      <div class="grp">관리 · 도움</div>
-      <ol>
-        <li><a href="#call"><span class="n">5</span><span class="t">학원에 전화하기</span><span class="tab">학원</span></a></li>
-        <li><a href="#edit"><span class="n">6</span><span class="t">수정하고 삭제하기</span><span class="tab">아이 · 학원</span></a></li>
-        <li><a href="#backup"><span class="n">7</span><span class="t">새 폰으로 옮기기 (백업)</span><span class="tab">설정</span></a></li>
-        <li><a href="#settings"><span class="n">8</span><span class="t">설정</span><span class="tab">설정</span></a></li>
-        <li><a href="#faq"><span class="n">9</span><span class="t">자주 묻는 질문</span><span class="tab"></span></a></li>
-      </ol>
+      <div class="tt-head">
+        <span class="tt-title">목차</span>
+        <span class="tt-days" aria-hidden="true"><i>월</i><i>화</i><i class="on">수</i><i>목</i><i>금</i></span>
+      </div>
+      <div class="tt-grid">
+      <section class="tt-blk c-o">
+        <div class="tt-name">시작하기</div>
+        <ol>
+          <li><a href="#kid"><span class="n">1-1</span><span class="t">아이 등록</span><span class="tab">아이</span></a></li>
+          <li><a href="#academy"><span class="n">1-2</span><span class="t">학원 등록</span><span class="tab">학원</span></a></li>
+          <li><a href="#enroll"><span class="n">1-3</span><span class="t">아이에게 학원 추가</span><span class="tab">아이</span></a></li>
+        </ol>
+      </section>
+      <section class="tt-blk c-b">
+        <div class="tt-name">시간표</div>
+        <ol>
+          <li><a href="#week"><span class="n">2-1</span><span class="t">주간 시간표</span><span class="tab">스케줄</span></a></li>
+          <li><a href="#month"><span class="n">2-2</span><span class="t">월간 달력</span><span class="tab">스케줄</span></a></li>
+          <li><a href="#print"><span class="n">2-3</span><span class="t">인쇄 · PDF 공유</span><span class="tab">스케줄</span></a></li>
+          <li><a href="#cancel"><span class="n">2-4</span><span class="t">휴강과 메모</span><span class="tab">스케줄</span></a></li>
+        </ol>
+      </section>
+      <section class="tt-blk c-g">
+        <div class="tt-name">보강</div>
+        <ol>
+          <li><a href="#makeup"><span class="n">3</span><span class="t">보강 등록과 목록</span><span class="tab">보강</span></a></li>
+        </ol>
+      </section>
+      <section class="tt-blk c-p">
+        <div class="tt-name">학원비</div>
+        <ol>
+          <li><a href="#fee"><span class="n">4-1</span><span class="t">주기 · 결제일 · 알림</span><span class="tab">아이</span></a></li>
+          <li><a href="#paid"><span class="n">4-2</span><span class="t">상태와 결제 완료</span><span class="tab">학원</span></a></li>
+          <li><a href="#total"><span class="n">4-3</span><span class="t">한 달 학원비 합계</span><span class="tab">학원</span></a></li>
+        </ol>
+      </section>
+      <section class="tt-blk c-n">
+        <div class="tt-name">관리 · 도움</div>
+        <ol>
+          <li><a href="#call"><span class="n">5</span><span class="t">학원에 전화하기</span><span class="tab">학원</span></a></li>
+          <li><a href="#edit"><span class="n">6</span><span class="t">수정하고 삭제하기</span></a></li>
+          <li><a href="#backup"><span class="n">7</span><span class="t">새 폰으로 옮기기</span><span class="tab">설정</span></a></li>
+          <li><a href="#settings"><span class="n">8</span><span class="t">설정</span></a></li>
+          <li><a href="#faq"><span class="n">9</span><span class="t">자주 묻는 질문</span></a></li>
+        </ol>
+      </section>
+      </div>
+      <div class="tt-sum"><span>모두 16개 항목</span><span>꼬리표 = 그 기능이 있는 탭</span></div>
     </nav>
 
     <h2 id="start">1. 시작하기</h2>

@@ -76,21 +76,35 @@ details p { margin: 8px 0 0; color: var(--label); }
 .doc li { margin: 4px 0; }
 .note { background: var(--primary-soft); color: var(--primary-ink); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
 .warn { background: var(--warn-soft); color: var(--warn-ink); border-radius: 12px; padding: 12px 14px; margin: 14px 0; }
-/* 설명서 목차 — 시간표 카드 모양: 묶음 머리글, 번호, 점선, 그 기능이 있는 탭 */
-.toc { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px 14px; }
-.toc .toc-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap;
-  padding-bottom: 10px; border-bottom: 1px solid var(--border); }
-.toc .toc-head span { color: var(--sub); font-size: .82rem; }
-.toc .grp { color: var(--primary-ink); font-size: .8rem; font-weight: 700; letter-spacing: .04em; margin: 16px 0 2px; }
+/* 설명서 목차 — 앱 주간 시간표 모양: 요일 머리줄 + 학원 색 블록. 블록 색은 앱 학원 색(o·b·g·p)과 같다 */
+.toc { --n: #ECEAE4; --n-ink: #3B3F47; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  background: var(--card); border: 1px solid var(--border); border-radius: 20px; overflow: hidden;
+  box-shadow: 0 1px 0 rgba(0,0,0,.02), 0 10px 30px -18px rgba(30,40,80,.35); }
+.toc .tt-head { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 18px; background: var(--ink); color: var(--bg); }
+.toc .tt-title { font-weight: 700; font-size: 1.05rem; letter-spacing: -.01em; }
+.toc .tt-days { display: flex; gap: 4px; font: 600 .74rem/1 var(--mono); }
+.toc .tt-days i { font-style: normal; width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; opacity: .55; }
+.toc .tt-days i.on { background: var(--primary); color: #fff; opacity: 1; }
+.toc .tt-grid { display: grid; grid-template-columns: 1fr; gap: 10px; padding: 14px;
+  background: repeating-linear-gradient(to bottom, transparent 0 43px, var(--border) 43px 44px); }
+@media (min-width: 720px) { .toc .tt-grid { grid-template-columns: 1fr 1fr; } .toc .tt-blk.c-n { grid-column: 1 / -1; }
+  .toc .tt-blk.c-n ol { columns: 2; column-gap: 28px; } .toc .tt-blk.c-n li { break-inside: avoid; } }
+.toc .tt-blk { --c: var(--n); --ci: var(--n-ink); background: var(--c); color: var(--ci);
+  border-radius: 12px; padding: 10px 14px 8px; border-left: 4px solid color-mix(in srgb, var(--ci) 55%, transparent); }
+.toc .c-o { --c: var(--o); --ci: var(--o-ink); } .toc .c-b { --c: var(--b); --ci: var(--b-ink); }
+.toc .c-g { --c: var(--g); --ci: var(--g-ink); } .toc .c-p { --c: var(--p); --ci: var(--p-ink); }
+.toc .tt-name { font-weight: 700; font-size: .95rem; margin-bottom: 2px; }
 .toc ol { list-style: none; margin: 0; padding: 0; }
-.toc li a { display: flex; align-items: baseline; gap: 10px; padding: 6px 0; color: var(--ink); text-decoration: none; }
-.toc li a .n { flex: none; width: 2.4em; color: var(--sub); font-variant-numeric: tabular-nums; font-size: .9rem; }
-.toc li a .t { flex: none; max-width: 70%; }
-.toc li a::after { content: ""; order: 3; flex: 1; min-width: 12px; border-bottom: 2px dotted var(--border); opacity: .9; transform: translateY(-.3em); }
-.toc li a .tab { order: 4; flex: none; font-size: .78rem; font-weight: 600; color: var(--primary-ink); background: var(--primary-soft);
-  border-radius: 999px; padding: 2px 9px; }
-.toc li a .tab:empty { display: none; }
-.toc li a:hover .t { color: var(--primary); }
+.toc li a { display: flex; align-items: baseline; gap: 8px; padding: 5px 0; color: inherit; text-decoration: none; font-size: .95rem; }
+.toc li a .n { flex: none; width: 2.6em; font: 600 .8rem var(--mono); opacity: .7; }
+.toc li a .t { flex: none; max-width: 68%; font-weight: 500; }
+.toc li a::after { content: ""; order: 3; flex: 1; min-width: 10px; border-bottom: 1.5px dotted currentColor; opacity: .35; transform: translateY(-.3em); }
+.toc li a .tab { order: 4; flex: none; font-size: .72rem; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+  background: rgba(255,255,255,.75); color: var(--ci); }
+.toc li a:hover .t { text-decoration: underline; text-underline-offset: 3px; }
+.toc .tt-sum { display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 10px 18px 12px;
+  border-top: 1px dashed var(--border); color: var(--sub); font: 500 .78rem var(--mono); }
 table { border-collapse: collapse; width: 100%; margin: 10px 0; font-size: .93rem; background: var(--card); border-radius: 12px; overflow: hidden; }
 th, td { border-bottom: 1px solid var(--border); padding: 9px 10px; text-align: left; vertical-align: top; }
 th { color: var(--label); font-weight: 600; }
