@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>아이타임 받기</title>
+<meta name="description" content="아이 학원 스케줄과 학원 시간표, 보강, 학원비 결제일까지 한 폰에서 — 아이타임을 받으세요.">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://itime.rapa.world/download/">
+<script>
+// 설치 출처 페이지(#40, 공통 MARKETING.md 3절). ?from=<채널키> → Play 설치 출처(utm). 키는 docs/marketing/config.md 「채널 키」.
+// App Store 는 캠페인 토큰(pt)이 없어 출처를 넘기지 않는다 — 아이폰 설치 수는 App Store Connect 분석의 웹 참조 기준.
+(function () {
+  var ua = navigator.userAgent || "";
+  var isIOS = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  var isAndroid = /Android/i.test(ua);
+  var REF = {
+    reel: "utm_source=instagram&utm_medium=reel",
+    shorts: "utm_source=youtube&utm_medium=shorts",
+    blog: "utm_source=naver_blog&utm_medium=post",
+    thread: "utm_source=community&utm_medium=post",
+    qr: "utm_source=qr&utm_medium=offline"
+  };
+  var ref = REF[new URLSearchParams(location.search).get("from")];
+  var play = "https://play.google.com/store/apps/details?id=world.rapa.itime" + (ref ? "&referrer=" + encodeURIComponent(ref) : "");
+  var target = isIOS ? "https://apps.apple.com/kr/app/id6820351484" : (isAndroid ? play : null);
+  if (target) {
+    document.documentElement.className = "redirecting";
+    window.location.replace(target);
+  }
+})();
+</script>
+<link rel="stylesheet" href="../site.css">
+<style>
+  .dl { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px; }
+  .dl main { width: 100%; max-width: 380px; text-align: center; }
+  .dl .mark { width: 88px; height: 88px; border-radius: 22px; margin: 0 auto 18px; display: grid; place-items: center;
+    background: var(--primary); color: #fff; font-size: 40px; font-weight: 700; }
+  .dl h1 { margin: 0 0 8px; font-size: 1.8rem; }
+  .dl p { margin: 0; color: var(--sub); line-height: 1.6; }
+  .dl .status { display: none; margin-top: 22px; color: var(--ink); }
+  .redirecting .dl .status { display: block; }
+  .dl .stores { margin-top: 28px; display: grid; gap: 12px; }
+  .dl .stores .badge { justify-content: center; }
+</style>
+</head>
+<body class="dl">
+<main>
+  <div class="mark" aria-hidden="true">아</div>
+  <h1>아이타임</h1>
+  <p>아이 학원 스케줄과 학원 시간표, 보강, 학원비 결제일까지 한 폰에서.</p>
+  <p class="status">스토어로 이동하고 있어요. 안 넘어가면 아래 버튼을 눌러 주세요.</p>
+  <nav class="stores" aria-label="스토어 선택">
+    <a class="badge" href="https://apps.apple.com/kr/app/id6820351484">App Store에서 받기</a>
+    <a class="badge" href="https://play.google.com/store/apps/details?id=world.rapa.itime">Google Play에서 받기</a>
+    <a class="badge ghost" href="../">아이타임 소개 보기</a>
+  </nav>
+</main>
+</body>
+</html>
