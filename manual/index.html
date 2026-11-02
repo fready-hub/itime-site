@@ -72,9 +72,10 @@
         <ol>
           <li><a href="#call"><span class="n">5</span><span class="t">학원에 전화하기</span><span class="tab">학원</span></a></li>
           <li><a href="#edit"><span class="n">6</span><span class="t">수정하고 삭제하기</span></a></li>
-          <li><a href="#backup"><span class="n">7</span><span class="t">새 폰으로 옮기기</span><span class="tab">설정</span></a></li>
-          <li><a href="#settings"><span class="n">8</span><span class="t">설정</span></a></li>
-          <li><a href="#faq"><span class="n">9</span><span class="t">자주 묻는 질문</span></a></li>
+          <li><a href="#family"><span class="n">7</span><span class="t">가족과 함께 보기</span><span class="tab">설정</span></a></li>
+          <li><a href="#backup"><span class="n">8</span><span class="t">새 폰으로 옮기기</span><span class="tab">설정</span></a></li>
+          <li><a href="#settings"><span class="n">9</span><span class="t">설정</span></a></li>
+          <li><a href="#faq"><span class="n">10</span><span class="t">자주 묻는 질문</span></a></li>
         </ol>
       </section>
       </div>
@@ -226,8 +227,31 @@
     </ul>
     <div class="warn">삭제는 되돌릴 수 없어요. 학원을 지우면 그 학원에 다니는 <strong>모든 아이의 수강·보강·결제 기록</strong>도 함께 지워지고, 아이를 지우면 그 아이의 수강이 모두 지워져요. 지우기 전에 무엇이 함께 지워지는지 확인 창에서 알려줘요.</div>
 
-    <h2 id="backup">7. 새 폰으로 옮기기 (백업)</h2>
-    <p>아이타임은 서버가 없어서 데이터가 <strong>지금 폰에만</strong> 있어요. 폰을 바꾸거나 앱을 다시 설치하기 전에 백업 파일을 만들어 두세요.</p>
+    <h2 id="family">7. 가족과 함께 보기 (가족 공유)</h2>
+    <p>아이·학원 같은 기록이 생긴 뒤 앱을 열면 <strong>"가족과 함께 보려고 서버에 보관해요"</strong> 안내가 떠요(초대 코드로 참여할 때는 참여 확인 창에 같은 문장이 함께 나와요). <strong>확인</strong>을 누르면 아이·학원·시간표 기록이 구글 서버(서울)의 <strong>내 가족 공간</strong>에 보관되고, 초대한 가족만 볼 수 있어요. 로그인은 없어요. 지금은 보관하고 싶지 않다면 <strong>나중에</strong>를 누르세요. 그러면 기록은 이 폰에만 있고, 앱을 열 때 다시 묻지 않아요. 가족 초대나 참여를 할 때 설정 → 가족 공유에서 다시 안내해요.</p>
+    <h3>가족 초대하기 (주인)</h3>
+    <ol>
+      <li>설정 → <strong>가족 공유</strong> → <strong>가족 초대하기</strong>.</li>
+      <li><strong>함께 고치기</strong> 또는 <strong>보기만</strong>을 골라요.</li>
+      <li>공유 창으로 코드(예: <code>ABCDE-12345</code>)를 보내요. 코드는 <strong>24시간 안에 한 번</strong>만 쓸 수 있어요.</li>
+    </ol>
+    <h3>참여하기 (가족)</h3>
+    <ol>
+      <li>설정 → <strong>가족 공유</strong> → <strong>초대 코드로 참여하기</strong> → 코드와 가족에게 보일 내 이름(예: 아빠 폰)을 넣어요.</li>
+      <li>"가족 공간에 참여할까요?"에서 <strong>참여하기</strong>.</li>
+    </ol>
+    <div class="warn">참여하면 이 폰의 기록이 <strong>가족 공간의 기록으로 바뀌어요</strong>. 지금 기록이 필요하면 먼저 <a href="#backup">백업을 내보내</a> 두세요.</div>
+    <h3>나가기·내보내기·삭제</h3>
+    <ul>
+      <li><strong>가족 공간에서 나가기</strong>(가족) — 이 폰의 기록을 남겨 내 가족 공간으로 새로 쓰거나, 모두 비울 수 있어요.</li>
+      <li><strong>내보내기</strong>(주인) — 가족 목록에서 골라요. 그 폰에는 지금까지의 기록이 남고, 더는 가족 공간을 보거나 고치지 못해요. 그 폰은 「가족 공간에서 나갔어요」를 보고, 서버에 다시 보관하기 전에 처음 안내를 다시 봐요.</li>
+      <li><strong>가족 공간 삭제</strong>(주인) — 서버의 가족 공간과 <strong>이 폰의 기록</strong>이 함께 지워져요. 가족의 폰에 있던 기록은 그 폰에 남아요. 삭제한 뒤 새로 기록하면 서버에 다시 보관하기 전에 처음 안내를 다시 보여 줘요.</li>
+      <li><strong>삭제 확인 코드</strong>(주인) — 앱을 지운 뒤에도 웹에서 가족 공간 삭제를 요청할 때 써요. <a href="../account-deletion.html#request">데이터 삭제 안내</a>를 보세요.</li>
+    </ul>
+    <p>앱을 지워도 서버의 가족 공간은 남아요. 서버 사본까지 지우려면 앱을 지우기 전에 <strong>가족 공간 삭제</strong>를 하세요.</p>
+
+    <h2 id="backup">8. 새 폰으로 옮기기 (백업)</h2>
+    <p>폰을 바꾸면 새 폰에서 가족 공간에 다시 참여하는 대신, 백업 파일로 옮길 수 있어요. 앱을 다시 설치하기 전에 백업 파일을 만들어 두세요.</p>
     <h3>내보내기 (지금 폰)</h3>
     <ol>
       <li><strong>스케줄</strong> 탭 오른쪽 위 <strong>톱니바퀴</strong> → <strong>설정</strong>.</li>
@@ -243,11 +267,13 @@
     <div class="warn">가져오기는 지금 앱에 있는 데이터를 <strong>모두 지우고</strong> 백업 내용으로 바꿔요. 합치기가 아니에요.</div>
     <p>백업 파일에는 아이 이름과 학원·일정·학원비 정보가 들어 있어요. 믿을 수 있는 곳에만 보관하세요.</p>
 
-    <h2 id="settings">8. 설정</h2>
+    <h2 id="settings">9. 설정</h2>
     <p><strong>스케줄</strong> 탭 오른쪽 위 톱니바퀴로 들어가요.</p>
     <ul>
-      <li><strong>도움말</strong> — 맨 위에 있어요. <strong>사용 설명서</strong>(이 페이지) · <strong>자주 묻는 질문</strong>(<a href="#faq">9장</a>) · <strong>문의하기</strong>(<a href="../support.html">문의 페이지</a>)로 연결돼요.</li>
-      <li><strong>백업 내보내기 · 가져오기</strong> — <a href="#backup">7장</a></li>
+      <li><strong>도움말</strong> — 맨 위에 있어요. <strong>사용 설명서</strong>(이 페이지) · <strong>자주 묻는 질문</strong>(<a href="#faq">10장</a>) · <strong>문의하기</strong>(<a href="../support.html">문의 페이지</a>)로 연결돼요.</li>
+      <li><strong>가족 공유</strong> — <a href="#family">7장</a></li>
+      <li><strong>사용 통계·오류 보고 보내기</strong> — 앱 개선을 위해 기능 사용 횟수와 오류 종류만 보내요. 끄면 그때부터 보내지 않아요(기본 켜짐, <a href="../privacy.html">개인정보처리방침</a> 1-라).</li>
+      <li><strong>백업 내보내기 · 가져오기</strong> — <a href="#backup">8장</a></li>
       <li><strong>알림 권한</strong> — 지금 알림이 허용됐는지 보여주고, 꺼져 있으면 휴대폰 설정으로 가는 버튼이 있어요.</li>
       <li><strong>정확한 시간에 알림</strong>(안드로이드) — 휴대폰의 <strong>알람 및 리마인더</strong> 허용 여부를 보여줘요. 꺼져 있으면 <strong>허용하기</strong>를 눌러 켜 주세요. 알림을 켠 수강을 저장할 때도 한 번 안내해요.</li>
       <li><strong>알림이 제때 오게 하기</strong>(안드로이드) — 배터리 사용이 "최적화"면 알림이 늦어질 수 있어요. <strong>앱 정보 열기</strong> → 배터리 → <strong>제한 없음</strong>.</li>
@@ -258,7 +284,7 @@
       <li><strong>앱 버전 · 오픈소스 라이선스</strong></li>
     </ul>
 
-    <h2 id="faq">9. 자주 묻는 질문</h2>
+    <h2 id="faq">10. 자주 묻는 질문</h2>
     <details id="faq-notify"><summary>결제일 알림이 안 와요.</summary>
       <p>① 설정 → 알림 권한이 <strong>허용됨</strong>인지 확인해 주세요. ② 그 수강의 <strong>결제일 알림</strong>이 켜져 있는지 확인해 주세요.
         ③ <strong>삼성 등 일부 안드로이드 폰은 배터리를 아끼려고 쓰지 않는 앱을 재워, 알림을 앱을 열 때까지 미뤄요.</strong>
@@ -279,7 +305,7 @@
     <details><summary>방학이라 학원을 잠깐 쉬어요.</summary>
       <p>수강 수정에서 <strong>종료일</strong>을 정하면 그날 이후로 시간표에서 빠져요. 다시 다니면 종료일을 지우세요.</p></details>
     <details><summary>배우자 폰에서도 보고 싶어요.</summary>
-      <p>실시간 공유는 없어요. 백업 파일을 보내 상대 폰에서 가져오면 같은 내용을 볼 수 있어요(가져오면 상대 폰의 기존 데이터는 바뀌어요).</p></details>
+      <p>설정 → <strong>가족 공유</strong>에서 가족을 초대하세요. 받은 코드로 참여하면 같은 시간표를 보고(함께 고치기로 초대하면 고치기도) 할 수 있어요. 자세한 방법은 <a href="#family">7장</a>.</p></details>
     <details id="faq-search"><summary>학원 검색에 다니는 학원이 안 나와요.</summary>
       <p>검색은 교육청에 등록된 학원·교습소 정보(나이스 교육정보 개방 포털)에서 찾아요. 지역(시도·시군구)이 맞는지, 이름을 더 짧게 써 보세요(예: "한빛 수학학원" → "한빛").
         체육관·개인 레슨처럼 교육청 등록 대상이 아닌 곳은 없을 수 있어요. 그럴 땐 직접 입력하면 돼요. 검색할 때는 <strong>검색어와 지역만</strong> 나이스로 보내요.</p></details>
