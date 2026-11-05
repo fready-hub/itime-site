@@ -19,7 +19,8 @@
     shorts: "utm_source=youtube&utm_medium=shorts",
     blog: "utm_source=naver_blog&utm_medium=post",
     thread: "utm_source=community&utm_medium=post",
-    qr: "utm_source=qr&utm_medium=offline"
+    qr: "utm_source=qr&utm_medium=offline",
+    ikey: "utm_source=ikey&utm_medium=cross_promo"
   };
   var ref = REF[new URLSearchParams(location.search).get("from")];
   var play = "https://play.google.com/store/apps/details?id=world.rapa.itime" + (ref ? "&referrer=" + encodeURIComponent(ref) : "");
