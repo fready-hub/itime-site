@@ -1,0 +1,38 @@
+# itime-site/.github/workflows/pages-deploy-alert.yml 로 복사해 쓰는 원본이다(#79).
+# pages-alert 는 page_build 의 errored(빌드 단계)만 본다. 빌드가 성공하고 deploy 잡이 실패하면
+# page_build 는 errored 가 아니라 알림이 없었다(2026-11-10 1f96ce0, run 42743625206).
+# 그래서 GitHub 이 만드는 「pages build and deployment」 워크플로 자체의 실패·시간초과를 슬랙 #itime-에러 로 보낸다.
+# 시험: workflow_dispatch 의 simulate=failure 는 알림 경로만 시험한다(실제 배포를 깨지 않는다).
+name: pages-deploy-alert
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+  workflow_dispatch:
+    inputs:
+      simulate:
+        description: "failure 를 넣으면 실패 알림을 시험 전송"
+        default: ""
+permissions:
+  contents: read
+jobs:
+  notify:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'failure' || github.event.workflow_run.conclusion == 'timed_out'
+    runs-on: ubuntu-latest
+    steps:
+      - name: 배포 실패면 슬랙으로
+        env:
+          SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
+          CHANNEL: C0C7T2E098S
+          SIM: ${{ inputs.simulate }}
+          CONCLUSION: ${{ github.event.workflow_run.conclusion || inputs.simulate }}
+          RUN_URL: ${{ github.event.workflow_run.html_url || format('{0}/{1}/actions', github.server_url, github.repository) }}
+          COMMIT: ${{ github.event.workflow_run.head_sha || github.sha }}
+          REPO: ${{ github.repository }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ] && [ "$SIM" != "failure" ]; then echo "시험 아님 — 보내지 않음"; exit 0; fi
+          TEXT=$(printf '🚨 *[itime] GitHub Pages 배포 실패*\n• 무엇: pages build and deployment 가 %s\n• 커밋: <https://github.com/%s/commit/%s|%s>\n• 어디서: <%s|실행 로그>\n• 지금 할 일: 로그의 deploy 잡 확인 후 「Re-run failed jobs」 — 복구 전까지 사이트는 이전 판\n_%s · <https://github.com/%s/actions|Actions>_' \
+            "$CONCLUSION" "$REPO" "$COMMIT" "${COMMIT:0:7}" "$RUN_URL" "$(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M KST')" "$REPO")
+          RES=$(curl -s -H "Authorization: Bearer $SLACK_BOT_TOKEN" -H 'Content-Type: application/json; charset=utf-8' \
+            -d "$(jq -n --arg c "$CHANNEL" --arg t "$TEXT" '{channel:$c,text:$t}')" https://slack.com/api/chat.postMessage)
+          echo "$RES" | jq -e .ok >/dev/null || { echo "슬랙 전송 실패: $RES"; exit 1; }
